@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import Profile from '@assets/images/profile/profile.webp';
+import { Icon } from 'astro-icon/components';
+import technologies from "../data/technologies.json";
+const github = technologies.find(tech => 'github' === tech.id);
+---
+
+<section class='flex flex-col items-center gap-y-4 scroll-mt-header' id="sobre-mi">
+    <div class='w-fit rounded-full bg-gradient-to-b from-primary to-secondary p-1 *:rounded-full'>
+      <div class='bg-dark p-3'>
+        <Image
+          src={Profile}
+          alt={'Profile'}
+          class='size-52 rounded-full object-cover'
+          loading={'eager'}
+        />
+      </div>
+    </div>
+    <div class='text-center'>
+      <h2 class='text-4xl font-bold leading-none text-primary'>Rafaella Fernández</h2>
+      <h3 class='text-2xl font-semibold leading-none text-secondary'>Desarrolladora de Software</h3>
+    </div>
+    <div class="flex justify-evenly gap-6">
+      {
+        technologies.filter(tech=> tech.main).map(tech => (
+          <div class="flex items-center gap-1">
+            <Icon
+              name={tech.icon}
+              class='size-4'
+              title={tech.name}
+              aria-label={tech.name}
+            />
+            <p class="text-light-1">{tech.name}</p>
+          </div>
+        ))
+      }
+    </div>
+    <p class="text-light-2">+2 años de experiencia en desarrollo y mejora de aplicaciones web</p>
+    <a href="https://github.com/chanmi-07" target="_blank" class="flex items-center gap-2 text-light-1 bg-gradient-to-br from-primary to-secondary px-3 py-2 rounded-full">
+      <Icon
+        name={github?.icon}
+        class='size-5'
+      />
+      <span class="leading-none">{github?.name}</span>
+    </a>
+  </section>

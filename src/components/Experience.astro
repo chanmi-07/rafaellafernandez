@@ -1,0 +1,36 @@
+---
+import SectionTitle from "./SectionTitle.astro";
+
+// companies
+import company from "../data/companies.json";
+import { Icon } from "astro-icon/components";
+---
+
+<section class="scroll-mt-header space-y-4">
+    <SectionTitle title="Experiencia" />
+    <article class="space-y-4">
+        <div class="flex items-center gap-x-4">
+            <Icon name={company.logo} class="text-light-1 size-9"/>
+            <div>
+                <h3 class="text-xl leading-none font-semibold text-light-1">{company.name}</h3>
+                <p class="text-light-1/60 text-sm">{company.date}</p>
+            </div>
+        </div>
+        <div class="space-y-4">
+            {
+                company.positions.map((position, index) =>
+                    <div class="flex gap-x-4">
+                        <div class="size-9 flex justify-center">
+                            <div class:list={["relative size-5 before:absolute before:size-2 before:rounded-full before:bg-primary flex items-center justify-center border-2 rounded-full", index == 0 ? 'border-secondary' : 'border-transparent']}></div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg text-light-1 font-semibold leading-none">{position.name}</h4>
+                            <p class="text-sm text-light-1/55 leading-none">{position.date}</p>
+                            <p class="text-light-2 mt-1">{position.description}</p>
+                        </div>
+                    </div>
+                )
+            }
+        </div>
+    </article>
+</section>

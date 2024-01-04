@@ -1,0 +1,44 @@
+[
+    {
+        "id": "laravel",
+        "name": "Laravel",
+        "icon": "devicon:laravel",
+        "main": true
+    },
+    {
+        "id": "mysql",
+        "name": "MySQL",
+        "icon": "devicon:mysql",
+        "main": true
+    },
+    {
+        "id": "tailwindcss",
+        "name": "Tailwind CSS",
+        "icon": "devicon:tailwindcss",
+        "main": true
+    },
+    {
+        "id": "figma",
+        "name": "Figma",
+        "icon": "devicon:figma",
+        "main": true
+    },
+    {
+        "id": "astro",
+        "name": "Astro",
+        "icon": "astro",
+        "main": false
+    },
+    {
+        "id": "react",
+        "name": "React",
+        "icon": "devicon:react",
+        "main": false
+    },
+    {
+        "id": "github",
+        "name": "GitHub",
+        "icon": "mdi:github",
+        "main": false
+    }
+]

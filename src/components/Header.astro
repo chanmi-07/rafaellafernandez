@@ -2,7 +2,7 @@
 const links = [
   {
     label: 'Sobre mí',
-    url: '/',
+    url: '#sobre-mi',
   },
   {
     label: 'Experiencia',
@@ -15,7 +15,7 @@ const links = [
 ];
 ---
 
-<header class='h-header bg-dark/10 flex items-center justify-evenly backdrop-blur-xl'>
+<header class='h-header bg-dark/10 flex items-center justify-evenly backdrop-blur-xl fixed w-[684px]'>
   {
     links.map(link => (
       <a href={link.url} class='text-light-1/80 hover:text-light-1'>

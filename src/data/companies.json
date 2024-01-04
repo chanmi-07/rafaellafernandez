@@ -1,0 +1,26 @@
+{
+    "id": "1",
+    "name": "Binarial",
+    "logo": "binarial",
+    "date": "2021 - actualidad",
+    "positions": [
+        {
+            "id": "1",
+            "name": "Desarrolladora Full Stack",
+            "date": "Enero 2023 - actualidad",
+            "description": "Mejora de sistema de analítica, prototipado y desarrollo de páginas estáticas"
+        },
+        {
+            "id": "2",
+            "name": "Desarrolladora BackEnd",
+            "date": "Abril 2022 - Diciembre 2022",
+            "description": "Desarrollo de un sistema de analítica y mejora de un aula virtual"
+        },
+        {
+            "id": "3",
+            "name": "Practicante de desarrollo de Software",
+            "date": "Mayo 2021 - Marzo 2022",
+            "description": "Desarrollo inicial de un sistema de gestión de proyectos, aula virtual y sistema de RRHH"
+        }
+    ]
+}

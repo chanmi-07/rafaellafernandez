@@ -1,3 +1,9 @@
+html
+{
+    color-scheme: dark;
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Josefin Sans Variable', sans-serif;
 }
