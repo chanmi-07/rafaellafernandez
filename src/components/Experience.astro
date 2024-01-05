@@ -6,7 +6,7 @@ import company from "../data/companies.json";
 import { Icon } from "astro-icon/components";
 ---
 
-<section class="scroll-mt-header space-y-4">
+<section class="scroll-mt-header space-y-4" id="experiencia">
     <SectionTitle title="Experiencia" />
     <article class="space-y-4">
         <div class="flex items-center gap-x-4">
@@ -20,13 +20,13 @@ import { Icon } from "astro-icon/components";
             {
                 company.positions.map((position, index) =>
                     <div class="flex gap-x-4">
-                        <div class="size-9 flex justify-center">
-                            <div class:list={["relative size-5 before:absolute before:size-2 before:rounded-full before:bg-primary flex items-center justify-center border-2 rounded-full", index == 0 ? 'border-secondary' : 'border-transparent']}></div>
+                        <div class="size-9 flex justify-center">  
+                            <div class="relative size-5 before:absolute before:size-2 before:rounded-full before:bg-primary flex items-center justify-center border-2 rounded-full border-secondary"></div>
                         </div>
                         <div>
                             <h4 class="text-lg text-light-1 font-semibold leading-none">{position.name}</h4>
-                            <p class="text-sm text-light-1/55 leading-none">{position.date}</p>
-                            <p class="text-light-2 mt-1">{position.description}</p>
+                            <p class="text-sm text-light-1/55">{position.date}</p>
+                            <p class="text-light-2">{position.description}</p>
                         </div>
                     </div>
                 )

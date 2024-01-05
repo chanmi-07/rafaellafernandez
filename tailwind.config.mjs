@@ -9,9 +9,12 @@ export default {
         secondary: "rgba(123, 136, 206, 1)",
         "light-1": "rgba(253, 250, 243, 1)",
         "light-2": "rgba(208, 205, 198, 1)",
+        astro: "rgba(255, 93, 1, 1)",
+        react: "rgba(97, 218, 251, 1)",
+        tailwindcss: "rgba(38, 194, 254, 1)",
       },
       spacing: {
-        header: "40px",
+        header: "60px",
       },
     },
   },

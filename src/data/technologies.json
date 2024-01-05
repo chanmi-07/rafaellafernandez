@@ -34,11 +34,5 @@
         "name": "React",
         "icon": "devicon:react",
         "main": false
-    },
-    {
-        "id": "github",
-        "name": "GitHub",
-        "icon": "mdi:github",
-        "main": false
     }
 ]
