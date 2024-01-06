@@ -1,97 +1,91 @@
 ---
-import { Image } from "astro:assets";
+import { Image } from 'astro:assets';
 import Profile from '@assets/images/profile/profile.webp';
 import { Icon } from 'astro-icon/components';
-import technologies from "../data/technologies.json";
-import social from "../data/social.json";
+import technologies from '../data/technologies.json';
+import social from '../data/social.json';
 ---
 
-<section class='flex flex-col items-center gap-y-4 scroll-mt-header' id="sobre-mi">
-    <div class='w-fit rounded-full bg-gradient-to-b from-primary to-secondary p-1 *:rounded-full'>
-      <div class='bg-dark p-3'>
-        <Image
-          src={Profile}
-          alt={'Profile'}
-          class='size-52 rounded-full object-cover'
-          loading={'eager'}
-        />
-      </div>
+<section class='flex scroll-mt-header flex-col items-center gap-y-4' id='sobre-mi'>
+  <div class='w-fit rounded-full bg-gradient-to-b from-primary to-secondary p-1 *:rounded-full'>
+    <div class='bg-dark p-3'>
+      <Image
+        src={Profile}
+        alt={'Profile'}
+        class='size-52 rounded-full object-cover'
+        loading={'eager'}
+      />
     </div>
-    <div class='text-center'>
-      <h2 class='text-4xl font-bold leading-none text-primary'>Rafaella Fernández</h2>
-      <h3 class='text-2xl font-semibold leading-none text-secondary'>Desarrolladora de Software</h3>
-    </div>
-    <div class="flex justify-evenly gap-6">
-      {
-        technologies.filter(tech=> tech.main).map(tech => (
-          <div class="flex items-center gap-1">
-            <Icon
-              name={tech.icon}
-              class='size-4'
-              title={tech.name}
-              aria-label={tech.name}
-            />
-            <p class="text-light-1">{tech.name}</p>
+  </div>
+  <div class='text-center'>
+    <h2 class='text-2xl font-bold leading-none text-primary sm:text-4xl'>Rafaella Fernández</h2>
+    <h3 class='text-xl font-semibold leading-none text-secondary sm:text-2xl'>
+      Desarrolladora de Software
+    </h3>
+  </div>
+  <div class='flex flex-wrap justify-evenly gap-x-6 gap-y-2'>
+    {
+      technologies
+        .filter(tech => tech.main)
+        .map(tech => (
+          <div class='flex items-center gap-1'>
+            <Icon name={tech.icon} class='size-4' title={tech.name} aria-label={tech.name} />
+            <p class='text-light-1'>{tech.name}</p>
           </div>
         ))
-      }
-    </div>
-    <p class="text-light-2">+2 años de experiencia en desarrollo y mejora de aplicaciones web</p>
-    <div class="flex gap-8 *:flex *:items-center *:border *:border-secondary *:rounded-full *:px-3 *:py-1 *:gap-x-2 hover:*:bg-primary/20">
-        <a href={social[0].url} target="_blank">
-          <Icon
-            name={social[0].icon}
-            class='size-5'
-          />
-          <span>{social[0].name}</span>
-        </a>
-
-        <a href={social[1].url} target="_blank">
-          <Icon
-            name={social[1].icon}
-            class='size-5'
-          />
-          <span>{social[1].name}</span>
-        </a>
-
-        <button id='copy-email-btn' class="relative overflow-hidden">
-          <Icon name={social[2].icon} />
-          <span>Correo</span>
-
-          <!-- Copied success -->
-          <div
-            id='copied-show-badge'
-            class='pointer-events-none absolute inset-0 hidden size-full items-center justify-center gap-x-2 bg-dark'
-          >
-            <Icon name='mdi:check-circle' />
-            <span>Copiado</span>
-          </div>
-        </button>
-    </div>
-    <a href="https://drive.google.com/file/d/1IjlQBVHnzzHeR0upLEt3cafpSQqaVNQ4/view?usp=sharing" target="_blank" class="flex items-center gap-2 text-light-1 bg-gradient-to-br from-primary to-secondary px-3 py-2 rounded-full">
-      <Icon
-        name='doc'
-        class='size-5'
-      />
-      <span class="leading-none">Ver CV</span>
+    }
+  </div>
+  <p class='text-light-2'>+2 años de experiencia en desarrollo y mejora de aplicaciones web</p>
+  <div
+    class='flex flex-wrap gap-x-6 gap-y-3 *:flex *:items-center *:gap-x-2 *:rounded-full *:border *:border-secondary *:px-3 *:py-1 hover:*:bg-primary/20'
+  >
+    <a href={social[0].url} target='_blank'>
+      <Icon name={social[0].icon} class='size-5' />
+      <span>{social[0].name}</span>
     </a>
-  </section>
 
-  <!-- copy gmail -->
-  <script>
-    import social from "../data/social.json";
-    const gmail = social.find(social => social.name === 'Gmail')
-    const button = document.getElementById('copy-email-btn')
-    const copied = document.getElementById('copied-show-badge')
-  
-    button?.addEventListener('click', () => 
-    {
-      navigator.clipboard.writeText(gmail?.url!)
-      copied?.classList.replace('hidden', 'flex')
-  
-      setTimeout(() => 
-      {
-        copied?.classList.replace('flex', 'hidden')
-      }, 800)
-    })
-  </script>
+    <a href={social[1].url} target='_blank'>
+      <Icon name={social[1].icon} class='size-5' />
+      <span>{social[1].name}</span>
+    </a>
+
+    <button id='copy-email-btn' class='relative overflow-hidden'>
+      <Icon name={social[2].icon} />
+      <span>Correo</span>
+
+      <!-- Copied success -->
+      <div
+        id='copied-show-badge'
+        class='pointer-events-none absolute inset-0 hidden size-full items-center justify-center gap-x-2 bg-dark'
+      >
+        <Icon name='mdi:check-circle' />
+        <span>Copiado</span>
+      </div>
+    </button>
+  </div>
+  <a
+    href='https://drive.google.com/file/d/1IjlQBVHnzzHeR0upLEt3cafpSQqaVNQ4/view?usp=sharing'
+    target='_blank'
+    class='flex items-center gap-2 rounded-full bg-gradient-to-br from-primary to-secondary px-3 py-2 text-light-1'
+  >
+    <Icon name='doc' class='size-5' />
+    <span class='leading-none'>Ver CV</span>
+  </a>
+</section>
+
+<!-- copy gmail -->
+<script>
+  import social from '../data/social.json';
+  const gmail = social.find(social => social.name === 'Gmail');
+  const button = document.getElementById('copy-email-btn');
+  const copied = document.getElementById('copied-show-badge');
+
+  button?.addEventListener('click', () => {
+    navigator.clipboard.writeText(gmail?.url!);
+    copied?.classList.replace('hidden', 'flex');
+
+    setTimeout(() => {
+      copied?.classList.replace('flex', 'hidden');
+    }, 800);
+  });
+</script>
