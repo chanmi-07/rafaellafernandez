@@ -9,4 +9,5 @@ export default defineConfig({
   image: {
     service: passthroughImageService(),
   },
+  site: 'https://rafaellafernandez.vercel.app'
 });

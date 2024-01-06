@@ -1,4 +1,3 @@
-import Profile from '@assets/images/profile/profile.png';
 import fs from 'fs';
 import { ImageResponse } from '@vercel/og';
  
@@ -9,13 +8,23 @@ interface Props {
 export async function GET() 
 {
   // array buffer to ptofile
-  const profile = fs.readFileSync('./src/assets/images/profile/profile.png');
-  const profileArrayBuffer = Uint8Array.from(profile).buffer;
+  const profile = fs.readFileSync('./src/assets/images/profile/profile.png').buffer;
 
   const html = {
     type: 'div',
     props: {
       children: [
+        {
+          type: 'div',
+          props:
+          {
+            tw: 'h-full w-4 absolute top-0 left-0',
+            style:
+            {
+              background: 'linear-gradient(180deg, #7B88CE 0%, #D8ACCF 100%)'
+            }
+          }
+        },
         {
           type: 'div',
           props: {
@@ -24,14 +33,38 @@ export async function GET()
               {
                 type: 'div',
                 props: {
-                  // using tailwind
-                  tw: 'w-[200px] h-[200px] flex rounded-3xl overflow-hidden',
+                  tw: 'h-full flex justify-center items-center p-2 rounded-full overflow-hidden' ,
+                  style:
+                  {
+                    background: 'linear-gradient(180deg, #7B88CE 0%, #D8ACCF 100%)'
+                  },
                   children: [
                     {
-                      type: 'img',
-                      props: {
-                        src: profileArrayBuffer,
-                      },
+                      type: 'div',
+                      props:
+                      {
+                        tw: 'bg-[#141416] flex justify-center items-center p-4 rounded-full overflow-hidden',
+                        children: 
+                        [
+                          {
+                            type: 'div',
+                            props:
+                            {
+                              tw: 'w-[170px] h-[170px] flex rounded-full overflow-hidden',
+                              children:
+                              [
+                                {
+                                  type: 'img',
+                                  props: 
+                                  {
+                                    src: profile,
+                                  },
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
                     },
                   ],
                 },
@@ -44,14 +77,14 @@ export async function GET()
                     {
                       type: 'div',
                       props: {
-                        tw: 'text-5xl font-bold text-[#D8ACCF]',
+                        tw: 'text-7xl font-bold text-[#D8ACCF]',
                         children: 'Rafaella Fernández',
                       },
                     },
                     {
                       type: 'div',
                       props: {
-                        tw: 'text-3xl font-bold text-[#7B88CE]',
+                        tw: 'text-5xl font-bold text-[#7B88CE]',
                         children: 'Desarrolladora de Software',
                       },
                     },
@@ -62,9 +95,9 @@ export async function GET()
           },
         },
       ],
-      tw: 'flex w-full h-full justify-center items-center bg-[#141416]',
-      style: {
-        // background: '#141416',
+      tw: 'flex w-full h-full justify-center items-center bg-[#141416] relative',
+      style: 
+      {
         fontFamily: 'Lato',
       },
     },
