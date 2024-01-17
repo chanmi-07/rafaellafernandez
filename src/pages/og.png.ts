@@ -1,5 +1,6 @@
 import fs from 'fs';
 import { ImageResponse } from '@vercel/og';
+import info from 'src/data/info.json';
  
 interface Props {
   params: { slug: string };
@@ -78,14 +79,14 @@ export async function GET()
                       type: 'div',
                       props: {
                         tw: 'text-7xl font-bold text-[#D8ACCF]',
-                        children: 'Rafaella Fernández',
+                        children: info.name,
                       },
                     },
                     {
                       type: 'div',
                       props: {
                         tw: 'text-5xl font-bold text-[#7B88CE]',
-                        children: 'Desarrolladora de Software',
+                        children: info.profession,
                       },
                     },
                   ],
@@ -102,21 +103,8 @@ export async function GET()
       },
     },
   };
- 
   return new ImageResponse(html, {
     width: 1200,
     height: 600,
-    // fonts: [
-    //   {
-    //     name: 'DM Sans Bold',
-    //     data: DmSansBold.buffer,
-    //     style: 'normal',
-    //   },
-    //   {
-    //     name: 'DM Sans Regular',
-    //     data: DmSansReqular.buffer,
-    //     style: 'normal',
-    //   },
-    // ],
   });
 }

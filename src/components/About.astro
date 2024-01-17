@@ -4,6 +4,7 @@ import Profile from '@assets/images/profile/profile.webp';
 import { Icon } from 'astro-icon/components';
 import technologies from '../data/technologies.json';
 import social from '../data/social.json';
+import info from '../data/info.json';
 ---
 
 <section class='flex scroll-mt-header flex-col items-center gap-y-4' id='sobre-mi'>
@@ -18,9 +19,9 @@ import social from '../data/social.json';
     </div>
   </div>
   <div class='text-center'>
-    <h2 class='text-2xl font-bold leading-none text-primary sm:text-4xl'>Rafaella Fernández</h2>
+    <h2 class='text-2xl font-bold leading-none text-primary sm:text-4xl'>{info.name}</h2>
     <h3 class='text-xl font-semibold leading-none text-secondary sm:text-2xl'>
-      Desarrolladora de Software
+      {info.profession}
     </h3>
   </div>
   <div class='flex flex-wrap justify-evenly gap-x-6 gap-y-2'>
@@ -35,7 +36,7 @@ import social from '../data/social.json';
         ))
     }
   </div>
-  <p class='text-light-2'>+2 años de experiencia en desarrollo y mejora de aplicaciones web</p>
+  <p class='text-light-2'>{info.description}</p>
   <div
     class='flex flex-wrap gap-x-6 gap-y-3 *:flex *:items-center *:gap-x-2 *:rounded-full *:border *:border-secondary *:px-3 *:py-1 hover:*:bg-primary/20'
   >

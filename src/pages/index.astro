@@ -4,12 +4,13 @@ import Layout from '../layouts/Layout.astro';
 import About from '@components/About.astro';
 import Experience from '@components/Experience.astro';
 import Projects from '@components/Projects.astro';
+import info from '../data/info.json';
 ---
 
-<Layout title='Rafaella Fernández'>
-  <div class="pt-header p-4 space-y-8">
-    <About/>
-    <Experience/>
-    <Projects/>
+<Layout title={info.name}>
+  <div class='space-y-8 p-4 pt-header'>
+    <About />
+    <Experience />
+    <Projects />
   </div>
 </Layout>
