@@ -12,6 +12,8 @@ export default {
         astro: "rgba(255, 93, 1, 1)",
         react: "rgba(97, 218, 251, 1)",
         tailwindcss: "rgba(38, 194, 254, 1)",
+        docusaurus: "rgba(37, 194, 160, 1)",
+        laravel: "rgba(240, 81, 63, 1)",
       },
       spacing: {
         header: "60px",

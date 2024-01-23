@@ -15,14 +15,14 @@ const links = [
 ];
 ---
 
-<header
-  class='fixed flex h-[40px] w-[684px] max-w-full items-center justify-evenly bg-dark/10 backdrop-blur-xl'
->
-  {
-    links.map(link => (
-      <a href={link.url} class='text-light-1/80 hover:text-light-1'>
-        {link.label}
-      </a>
-    ))
-  }
+<header class='fixed left-0 z-10 w-full bg-dark/10 backdrop-blur-xl'>
+  <nav class='mx-auto flex h-[40px] w-[684px] max-w-full items-center justify-evenly'>
+    {
+      links.map(link => (
+        <a href={link.url} class='text-light-1/80 hover:text-light-1'>
+          {link.label}
+        </a>
+      ))
+    }
+  </nav>
 </header>

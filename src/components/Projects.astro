@@ -1,6 +1,6 @@
 ---
 import SectionTitle from './SectionTitle.astro';
-import { project } from '../data/projects.ts';
+import { projects } from '../data/projects.ts';
 import { Image } from 'astro:assets';
 import technologies from '../data/technologies.json';
 import { Icon } from 'astro-icon/components';
@@ -9,49 +9,59 @@ const classTech = {
   astro: 'bg-astro/20 border-astro',
   react: 'bg-react/20 border-react',
   tailwindcss: 'bg-tailwindcss/20 border-tailwindcss',
+  docusaurus: 'bg-docusaurus/20 border-docusaurus',
+  laravel: 'bg-laravel/20 border-laravel',
 };
 ---
 
 <section class='scroll-mt-header space-y-4' id='proyectos'>
   <SectionTitle title='Proyectos' />
-  <div class='space-y-2'>
-    <header>
-      <a href={project.url} target='_blank' class='text-xl font-semibold leading-none text-light-1'
-        >{project.name}</a
-      >
-      <p class='text-light-2'>{project.description}</p>
-    </header>
-    <a href={project.url}>
-      <div class='group relative aspect-video w-full overflow-hidden rounded-xl'>
-        <Image
-          src={project.image}
-          alt={project.name}
-          transition:name='hero'
-          class='size-full object-cover transition-all group-hover:scale-105 group-hover:shadow-xl'
-        />
-        <Icon
-          name='external-link'
-          class='absolute right-2 top-2 hidden size-6 transition-all group-hover:block'
-        />
-      </div>
-    </a>
-    <footer class='flex flex-wrap gap-x-4 gap-y-3'>
-      {
-        project.technologies.map(tech => (
-          <div
-            class:list={[
-              'rounded-full border px-3 py-1 text-sm',
-              classTech[tech as keyof typeof classTech],
-            ]}
-          >
-            <Icon
-              name={technologies.filter(t => t.id === tech)[0].icon}
-              class='mr-1 inline-block h-4 w-4'
-            />
-            {technologies.filter(t => t.id === tech)[0].name}
-          </div>
-        ))
-      }
-    </footer>
+  <div class='flex flex-col gap-y-10'>
+    {
+      projects.map((project, index) => (
+        <div class='flex flex-col gap-y-3'>
+          <header class='space-y-2'>
+            <a
+              href={project.url}
+              target='_blank'
+              class='text-xl font-semibold leading-none text-light-1'
+            >
+              {project.name}
+            </a>
+            <p class='text-light-2'>{project.description}</p>
+          </header>
+          <a href={project.url} target='_blank'>
+            <div class='group relative aspect-video w-full overflow-hidden rounded-md'>
+              <Image
+                src={project.image}
+                alt={project.name}
+                transition:name='hero'
+                class='size-full object-cover transition-all group-hover:scale-[1.02] group-hover:shadow-xl'
+              />
+              <Icon
+                name='external-link'
+                class='absolute right-2 top-2 hidden size-6 transition-all group-hover:block'
+              />
+            </div>
+          </a>
+          <footer class='flex flex-wrap gap-x-4 gap-y-3'>
+            {project.technologies.map(tech => (
+              <div
+                class:list={[
+                  'rounded-full border px-3 py-1 text-sm',
+                  classTech[tech as keyof typeof classTech],
+                ]}
+              >
+                <Icon
+                  name={technologies.filter(t => t.id === tech)[0].icon}
+                  class='mr-1 inline-block h-4 w-4'
+                />
+                {technologies.filter(t => t.id === tech)[0].name}
+              </div>
+            ))}
+          </footer>
+        </div>
+      ))
+    }
   </div>
 </section>

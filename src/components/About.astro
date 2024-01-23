@@ -38,7 +38,7 @@ import info from '../data/info.json';
   </div>
   <p class='text-light-2'>{info.description}</p>
   <div
-    class='flex flex-wrap gap-x-6 gap-y-3 *:flex *:items-center *:gap-x-2 *:rounded-full *:border *:border-secondary *:px-3 *:py-1 hover:*:bg-primary/20'
+    class='flex flex-wrap gap-x-4 gap-y-3 *:flex *:items-center *:gap-x-2 *:rounded-full *:border *:border-secondary *:px-3 *:py-1 hover:*:bg-primary/20'
   >
     <a href={social[0].url} target='_blank'>
       <Icon name={social[0].icon} class='size-5' />
@@ -52,7 +52,7 @@ import info from '../data/info.json';
 
     <button id='copy-email-btn' class='relative overflow-hidden'>
       <Icon name={social[2].icon} />
-      <span>Correo</span>
+      <span>{social[2].name}</span>
 
       <!-- Copied success -->
       <div

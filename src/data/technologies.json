@@ -34,5 +34,11 @@
         "name": "React",
         "icon": "devicon:react",
         "main": false
+    },
+    {
+        "id": "docusaurus",
+        "name": "Docusaurus",
+        "icon": "docusaurus",
+        "main": false
     }
 ]
