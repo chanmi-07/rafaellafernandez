@@ -1,44 +1,62 @@
 [
-    {
-        "id": "laravel",
-        "name": "Laravel",
-        "icon": "devicon:laravel",
-        "main": true
-    },
-    {
-        "id": "mysql",
-        "name": "MySQL",
-        "icon": "devicon:mysql",
-        "main": true
-    },
-    {
-        "id": "tailwindcss",
-        "name": "Tailwind CSS",
-        "icon": "devicon:tailwindcss",
-        "main": true
-    },
-    {
-        "id": "figma",
-        "name": "Figma",
-        "icon": "devicon:figma",
-        "main": true
-    },
-    {
-        "id": "astro",
-        "name": "Astro",
-        "icon": "astro",
-        "main": false
-    },
-    {
-        "id": "react",
-        "name": "React",
-        "icon": "devicon:react",
-        "main": false
-    },
-    {
-        "id": "docusaurus",
-        "name": "Docusaurus",
-        "icon": "docusaurus",
-        "main": false
-    }
+  {
+    "id": "laravel",
+    "name": "Laravel",
+    "icon": "devicon:laravel",
+    "main": true
+  },
+  {
+    "id": "mysql",
+    "name": "MySQL",
+    "icon": "devicon:mysql",
+    "main": true
+  },
+  {
+    "id": "tailwindcss",
+    "name": "Tailwind CSS",
+    "icon": "devicon:tailwindcss",
+    "main": true
+  },
+  {
+    "id": "figma",
+    "name": "Figma",
+    "icon": "devicon:figma",
+    "main": true
+  },
+  {
+    "id": "astro",
+    "name": "Astro",
+    "icon": "astro",
+    "main": false
+  },
+  {
+    "id": "react",
+    "name": "React",
+    "icon": "devicon:react",
+    "main": false
+  },
+  {
+    "id": "docusaurus",
+    "name": "Docusaurus",
+    "icon": "docusaurus",
+    "main": false
+  },
+  {
+    "id": "spatie",
+    "name": "Spatie",
+    "icon": "spatie",
+    "main": false
+  },
+  {
+    "id": "socialite",
+    "name": "Laravel Socialite",
+    "icon": "socialite",
+    "main": false
+  },
+  {
+    "id": "vonage",
+    "name": "Vonage",
+    "icon": "vonage",
+    "main": false
+  }
 ]

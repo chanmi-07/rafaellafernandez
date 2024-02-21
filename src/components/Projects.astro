@@ -11,6 +11,9 @@ const classTech = {
   tailwindcss: 'bg-tailwindcss/20 border-tailwindcss',
   docusaurus: 'bg-docusaurus/20 border-docusaurus',
   laravel: 'bg-laravel/20 border-laravel',
+  spatie: 'bg-spatie/20 border-spatie',
+  socialite: 'bg-socialite/20 border-socialite',
+  vonage: 'bg-vonage/20 border-vonage',
 };
 ---
 
@@ -48,13 +51,13 @@ const classTech = {
             {project.technologies.map(tech => (
               <div
                 class:list={[
-                  'rounded-full border px-3 py-1 text-sm',
+                  'flex items-center gap-x-2 rounded-full border px-3 py-1 text-sm',
                   classTech[tech as keyof typeof classTech],
                 ]}
               >
                 <Icon
                   name={technologies.filter(t => t.id === tech)[0].icon}
-                  class='mr-1 inline-block h-4 w-4'
+                  class='inline-block h-4 w-4'
                 />
                 {technologies.filter(t => t.id === tech)[0].name}
               </div>

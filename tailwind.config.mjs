@@ -14,6 +14,9 @@ export default {
         tailwindcss: "rgba(38, 194, 254, 1)",
         docusaurus: "rgba(37, 194, 160, 1)",
         laravel: "rgba(240, 81, 63, 1)",
+        spatie: "rgba(0, 117, 147, 1)",
+        socialite: "rgba(227, 148, 187, 1)",
+        vonage: "rgba(0, 0, 0, 1)",
       },
       spacing: {
         header: "60px",
