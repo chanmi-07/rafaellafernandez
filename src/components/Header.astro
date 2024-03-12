@@ -13,13 +13,21 @@ const links = [
     url: '#proyectos',
   },
 ];
+
+const currentPath = new URL(Astro.url.pathname, Astro.url.origin).pathname.slice(1);
+// const currentPath = pathname.slice(1);
 ---
 
 <header class='fixed left-0 z-10 w-full bg-dark/10 backdrop-blur-xl'>
   <nav class='mx-auto flex h-[40px] w-[684px] max-w-full items-center justify-evenly'>
     {
       links.map(link => (
-        <a href={link.url} class='text-light-1/80 hover:text-light-1'>
+        <a
+          href={link.url}
+          class:list={[
+            currentPath === link.url ? 'text-pink-500' : 'text-light-1/80 hover:text-light-1',
+          ]}
+        >
           {link.label}
         </a>
       ))
