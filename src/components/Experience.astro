@@ -1,36 +1,35 @@
 ---
-import SectionTitle from "./SectionTitle.astro";
+import SectionTitle from './SectionTitle.astro';
 
 // companies
-import company from "../data/companies.json";
-import { Icon } from "astro-icon/components";
+import company from '../data/companies.json';
+import { Icon } from 'astro-icon/components';
 ---
 
-<section class="scroll-mt-header space-y-4" id="experiencia">
-    <SectionTitle title="Experiencia" />
-    <article class="space-y-4">
-        <div class="flex items-center gap-x-4">
-            <Icon name={company.logo} class="text-light-1 size-9"/>
-            <div>
-                <h3 class="text-xl leading-none font-semibold text-light-1">{company.name}</h3>
-                <p class="text-light-1/60 text-sm">{company.date}</p>
+<section class='scroll-mt-header space-y-4' id='experiencia'>
+  <SectionTitle title='Experiencia' />
+  <article class='space-y-4'>
+    <div class='flex items-center gap-x-4'>
+      <Icon name={company.logo} class='size-9 text-light-1' />
+      <div>
+        <h3 class='text-xl font-semibold leading-none text-light-1'>{company.name}</h3>
+        <p class='text-sm text-light-1/60'>{company.date}</p>
+      </div>
+    </div>
+    <div class=''>
+      {
+        company.positions.map((position, index) => (
+          <>
+            <div class='group relative mx-4 px-6 pb-4'>
+              <div class='flex before:absolute before:left-2 before:h-full before:w-[1px] before:-translate-x-1/2 before:translate-y-3 before:bg-neutral-700 after:absolute after:left-2 after:size-3 after:-translate-x-1/2 after:translate-y-2 after:rounded-full after:bg-primary group-last:before:hidden'>
+                <h4 class='text-lg font-semibold'>{position.name}</h4>
+              </div>
+              <p class='text-sm text-light-1/55'>{position.date}</p>
+              <div class='text-light-2'>{position.description}</div>
             </div>
-        </div>
-        <div class="space-y-4">
-            {
-                company.positions.map((position, index) =>
-                    <div class="flex gap-x-4">
-                        <div class="size-9 flex justify-center">  
-                            <div class="relative size-5 before:absolute before:size-2 before:rounded-full before:bg-primary flex items-center justify-center border-2 rounded-full border-secondary"></div>
-                        </div>
-                        <div>
-                            <h4 class="text-lg text-light-1 font-semibold leading-none">{position.name}</h4>
-                            <p class="text-sm text-light-1/55">{position.date}</p>
-                            <p class="text-light-2">{position.description}</p>
-                        </div>
-                    </div>
-                )
-            }
-        </div>
-    </article>
+          </>
+        ))
+      }
+    </div>
+  </article>
 </section>
