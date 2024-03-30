@@ -1,26 +1,42 @@
-{
-  "id": "1",
-  "name": "Binarial",
-  "logo": "binarial",
-  "date": "2021 - 2024",
-  "positions": [
-    {
-      "id": "1",
-      "name": "Desarrolladora Full Stack",
-      "date": "Enero 2023 - Enero 2024",
-      "description": "Responsable de planificar, dirigir y controlar el Área de Sistemas e Informática, implementar nuevos Sistemas de Información, desarrollar estructuras de datos y codificación, supervisar y guiar proyectos, establecer copias de seguridad, y coordinar la elaboración de manuales e instructivos para hardware, software y sistemas."
-    },
-    {
-      "id": "2",
-      "name": "Desarrolladora BackEnd",
-      "date": "Abril 2022 - Diciembre 2022",
-      "description": "Desarrollo de software para simplificar y automatizar procesos, resolviendo problemas de manera sistemática. Digitalización de código para plataformas digitales, administración de correos electrónicos corporativos, capacitación a usuarios en sistemas de información, y actualización de documentación de procesos internos de sistemas."
-    },
-    {
-      "id": "3",
-      "name": "Practicante de desarrollo de Software",
-      "date": "Mayo 2021 - Marzo 2022",
-      "description": "Apoyo en el análisis, diseño y desarrollo de soluciones de software, incluyendo la realización de pruebas de calidad, implementación, configuración, y brindando soporte y mantenimiento."
-    }
-  ]
-}
+[
+  {
+    "id": "1",
+    "name": "Binarial",
+    "logo": "binarial",
+    "date": "2021 - 2024",
+    "positions": [
+      {
+        "id": "1",
+        "name": "Desarrolladora Full Stack",
+        "date": "Enero 2023 - Enero 2024",
+        "description": "Responsable de organizar el Área de TI, implementar nuevos Sistemas de Información, supervisar proyectos, establecer copias de seguridad, y la elaboración de manuales sobre los sistemas."
+      },
+      {
+        "id": "2",
+        "name": "Desarrolladora BackEnd",
+        "date": "Abril 2022 - Diciembre 2022",
+        "description": "Desarrollo de software para mejorar procesos. Administración de correos corporativos, capacitación a usuarios en sistemas, y documentación de procesos internos."
+      },
+      {
+        "id": "3",
+        "name": "Practicante de desarrollo de Software",
+        "date": "Mayo 2021 - Marzo 2022",
+        "description": "Apoyo en el análisis, diseño y desarrollo de software, implementación y configuración."
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Universidad Nacional de Ingeniería",
+    "logo": "uni",
+    "date": "2019 - 2020",
+    "positions": [
+      {
+        "id": "1",
+        "name": "Practicas Pre Profesionales",
+        "date": null,
+        "description": "Resolver desafíos de programación. Capacitación a usuarios en sistemas internos, y apoyo al área de sistemas."
+      }
+    ]
+  }
+]
