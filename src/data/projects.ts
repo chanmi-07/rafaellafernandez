@@ -1,6 +1,7 @@
 import ItConcept2 from '@assets/images/projects/1.webp';
 import SistemaSolarApi from '@assets/images/projects/2.webp';
 import Petcontrado from '@assets/images/projects/3.webp';
+import UbigeosPeru from '@assets/images/projects/4.webp';
 
 export const projects =
 [
@@ -18,10 +19,20 @@ export const projects =
         "name": "Petcontrado (Servivio Web)",
         "description": "Servicio web para encontrar, reportar y adoptar mascotas. Cuenta con login con google, funciones CRUD para el reporte de mascotas y envío de SMS con Vonage, roles y permisos con Spatie.",
         "image": Petcontrado,
-        "url": "https://encuentratumascota.nijui.com/",
+        "url": "https://petcontrado.nijui.com/",
         "technologies":
         [
             "laravel", "spatie", "vonage", "socialite"
+        ]
+    },
+    {
+        "name": "Ubigeos Perú",
+        "description": "API para obtener información de los departamentos, provincias y distritos del Perú.",
+        "image": UbigeosPeru,
+        "url": "https://ubigeosperu.nijui.com/api",
+        "technologies":
+        [
+            "lumen"
         ]
     },
     {

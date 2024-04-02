@@ -58,5 +58,11 @@
     "name": "Vonage",
     "icon": "vonage",
     "main": false
+  },
+  {
+    "id": "lumen",
+    "name": "Lumen",
+    "icon": "lumen",
+    "main": false
   }
 ]

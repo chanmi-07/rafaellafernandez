@@ -40,44 +40,42 @@ import info from '../data/info.json';
   <div
     class='flex flex-wrap gap-x-4 gap-y-3 *:flex *:items-center *:gap-x-2 *:rounded-full *:border *:border-secondary *:px-3 *:py-1 hover:*:bg-primary/20'
   >
-    <a href={social[0].url} target='_blank'>
-      <Icon name={social[0].icon} class='size-5' />
+    <button
+      id='copy-email-btn'
+      class='relative flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-br from-primary to-secondary px-3 py-2 text-light-1'
+    >
+      <Icon name={social[0].icon} />
       <span>{social[0].name}</span>
-    </a>
-
-    <a href={social[1].url} target='_blank'>
-      <Icon name={social[1].icon} class='size-5' />
-      <span>{social[1].name}</span>
-    </a>
-
-    <button id='copy-email-btn' class='relative overflow-hidden'>
-      <Icon name={social[2].icon} />
-      <span>{social[2].name}</span>
-
       <!-- Copied success -->
       <div
         id='copied-show-badge'
-        class='pointer-events-none absolute inset-0 hidden size-full items-center justify-center gap-x-2 bg-dark'
+        class='pointer-events-none absolute inset-0 hidden size-full items-center justify-center gap-x-2 bg-gradient-to-br from-primary to-secondary px-3 py-2'
       >
         <Icon name='mdi:check-circle' />
         <span>Copiado</span>
       </div>
     </button>
+    <a href={social[1].url} target='_blank'>
+      <Icon name={social[1].icon} class='size-5' />
+      <!-- <span>{social[1].name}</span> -->
+    </a>
+
+    <a href={social[2].url} target='_blank'>
+      <Icon name={social[2].icon} class='size-5' />
+      <!-- <span>{social[2].name}</span> -->
+    </a>
+
+    <a href={social[3].url} target='_blank'>
+      <Icon name={social[3].icon} class='size-5' />
+      <!-- <span>{social[3].name}</span> -->
+    </a>
   </div>
-  <a
-    href='https://drive.google.com/file/d/1IjlQBVHnzzHeR0upLEt3cafpSQqaVNQ4/view?usp=sharing'
-    target='_blank'
-    class='flex items-center gap-2 rounded-full bg-gradient-to-br from-primary to-secondary px-3 py-2 text-light-1'
-  >
-    <Icon name='doc' class='size-5' />
-    <span class='leading-none'>Ver CV</span>
-  </a>
 </section>
 
 <!-- copy gmail -->
 <script>
   import social from '../data/social.json';
-  const gmail = social[2];
+  const gmail = social[0];
   const button = document.getElementById('copy-email-btn');
   const copied = document.getElementById('copied-show-badge');
 
